@@ -1,0 +1,39 @@
+.aboutSistHomeSubHeadDiv {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(102, 102, 102);
+    font-weight: 900;
+}
+
+.aboutSistHomePic {
+    width: 100%;
+    order: 2;
+}
+
+.aboutSistHomePic img {
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.aboutSistHomeDescrip {
+    padding: 20px;
+    text-align: justify;
+    font-size: 20px;
+    order: 1;
+}
+.aboutSistHomeContainer{
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width:1200px){
+    .aboutSistHomeContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutSistHomePic{
+        display: flex;
+        justify-content: center;
+    }
+}
+

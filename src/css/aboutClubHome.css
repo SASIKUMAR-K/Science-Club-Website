@@ -1,0 +1,70 @@
+.aboutClubHomeHeadDiv {
+    text-align: center;
+    color: #8E793E;
+    font-size: 40px;
+    margin: 30px 0px 15px 0px;
+    font-weight: 600;
+}
+
+.aboutClubHomeSubHeadDiv {
+    text-align: center;
+    font-size: 30px;
+    color: rgb(102, 102, 102);
+    font-weight: 900;
+}
+
+.aboutClubHomePic {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.aboutClubHomePic img {
+    min-width: 250px;
+    max-width: 350px;
+}
+
+.aboutClubHomeDescrip {
+    padding: 20px;
+    text-align: justify;
+    font-size: 20px;
+}
+
+.aboutClubHomeMemberFormDiv {
+    display: flex;
+    justify-content: center;
+}
+
+.aboutClubHomeMemberForm {
+    text-align: center;
+    margin: 10px auto;
+    color: white;
+    background-color: #8E793E;
+    padding: 5px 10px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 2px solid #8E793E;
+    border-radius: 22px;
+    margin-bottom: 40px;
+}
+
+.aboutClubHomeMemberForm:active {
+    color: #8E793E;
+    background-color: white;
+    margin: 10px auto;   
+}
+.aboutClubHomeContainer{
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width:1200px){
+    .aboutClubHomeContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .aboutClubHomePic{
+        display: flex;
+        justify-content: center;
+    }
+}

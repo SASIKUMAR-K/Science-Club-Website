@@ -1,0 +1,23 @@
+.copyRightContent{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.aboutMeContainer {
+    text-align: center;
+    letter-spacing: 2px;
+    width: 100%;
+    background-color:#231F20;
+    color: white;
+    padding: 4px 0px;
+    font-size: 15px;
+    
+}
+
+.aboutMeContainer p {
+    display: inline;
+}
+
+.aboutMeContainer a {
+    color:#AD974F;
+}

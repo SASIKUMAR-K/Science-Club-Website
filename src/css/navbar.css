@@ -1,0 +1,109 @@
+body{
+    overflow: auto;
+}
+
+.navBarContainer{
+    display: flex;
+    padding: 10px;
+    background-color:rgb(252, 223, 36);
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top:0px;
+    z-index: 3;
+}
+.navBarLogoContainer{
+    display: flex;
+    cursor: pointer;
+}
+.navBarLogo img{
+    width: 50px;
+}
+.navBarLogoText img{
+    height: 50px;
+}
+
+.navBarItems{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    font-size: 25px;
+    padding: 0px 20px;
+    transition: all 1s ease;
+}
+.navBarItem{
+    cursor: pointer;
+}
+.navBarItem a{
+    text-decoration: none;
+    color: black;
+}
+.navBarMenu{
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    
+    
+}
+.navBarMenu div{
+    width: 35px;
+    border-bottom: 5px solid black;
+    border-radius: 30px;
+    transition: all 0.5s ease;
+}
+
+.x.line1{
+    transform: translate(0px,7.5px) rotate(45deg);
+}
+.x.line2{
+    display: none;
+}
+.x.line3{
+    transform: translate(-0px,-7.5px) rotate(-45deg);
+}
+  
+
+@media only screen and (max-width:850px){
+    .navBarMenu{
+        display: flex;
+    }
+    .navBarItems{
+        flex-direction: column;
+        position: absolute;
+        top:70px;
+        right: 0px;
+        width: 200px;
+        transform: translate(-0px,0);
+        background-color:rgb(21, 161, 255);
+        height: 100vh;
+        justify-content:flex-start;
+        padding-top: 100px;
+        gap: 30px;
+        color :white
+    }
+    .navBarItem a{
+        color: white;
+    }
+    body{
+        overflow-x: hidden;
+    }
+    .navBarItems.navBarItemsToggle{
+        transform: translate(200px,0);
+    }
+}
+
+@media only screen and (max-width:380px){
+    .navBarItems{
+        top: 54px;
+    }
+    .navBarLogoContainer img{
+        height: 30px;
+    }
+    .navBarLogo img{
+        width: 30px;
+    }
+}
+  
+
+
