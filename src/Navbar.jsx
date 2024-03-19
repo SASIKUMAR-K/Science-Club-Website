@@ -42,7 +42,7 @@ const Navbar = () => {
 						</Link>
 					</div>
 					<div className='navBarItem'>
-						<Link to='/gallery' onClick={handleLinkClick}>
+						<Link to='/gallary' onClick={handleLinkClick}>
 							Gallery
 						</Link>
 					</div>

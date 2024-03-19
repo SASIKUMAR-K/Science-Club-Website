@@ -1,0 +1,43 @@
+{
+    "sos":[
+        {
+            "original": "/img/gallery/events/sos/1.jpg",
+            "thumbnail": "/img/gallery/events/sos/1.jpg"
+        },
+        {
+            "original": "/img/gallery/events/sos/2.jpg",
+            "thumbnail": "/img/gallery/events/sos/2.jpg"
+        },
+        {
+            "original": "/img/gallery/events/sos/3.jpg",
+            "thumbnail": "/img/gallery/events/sos/3.jpg"
+        },
+        {
+            "original": "/img/gallery/events/sos/4.jpg",
+            "thumbnail": "/img/gallery/events/sos/4.jpg"
+        },
+        {
+            "original": "/img/gallery/events/sos/5.jpg",
+            "thumbnail": "/img/gallery/events/sos/5.jpg"
+        }
+        
+    ],
+    "sov-1-mar-14-2024":[
+        {
+            "original": "/img/gallery/school on wheels/1 Mar 14 2023/1.png",
+            "thumbnail": "/img/gallery/school on wheels/1 Mar 14 2023/1.png"
+        },
+        {
+            "original": "/img/gallery/school on wheels/1 Mar 14 2023/2.jpg",
+            "thumbnail": "/img/gallery/school on wheels/1 Mar 14 2023/2.jpg"
+        },
+        {
+            "original": "/img/gallery/school on wheels/1 Mar 14 2023/3.jpg",
+            "thumbnail": "/img/gallery/school on wheels/1 Mar 14 2023/3.jpg"
+        },
+        {
+            "original": "/img/gallery/events/sos/4.jpg",
+            "thumbnail": "/img/gallery/events/sos/4.jpg"
+        }
+    ]
+}

@@ -70,7 +70,7 @@ body{
     }
     .navBarItems{
         flex-direction: column;
-        position: absolute;
+        position: fixed;
         top:70px;
         right: 0px;
         width: 200px;
