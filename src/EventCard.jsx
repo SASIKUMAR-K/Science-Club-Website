@@ -1,6 +1,12 @@
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import './css/recentEvent.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+	faCalendarDays,
+	faBusinessTime,
+	faLocationDot,
+} from '@fortawesome/free-solid-svg-icons';
 
 const EventCard = (props) => {
 	const navigate = useNavigate();
@@ -18,6 +24,26 @@ const EventCard = (props) => {
 				<div className='recentEventDetails'>
 					<div className='recentEventName'>{props.eventName}</div>
 					<div className='recentEventShortDesc'>{props.eventShortDesc}</div>
+					<div className='eventManDetails'>
+						<div className='cardEventDate'>
+							<span className='fontEventCard'>
+								<FontAwesomeIcon icon={faCalendarDays} />
+							</span>
+							{props.eventDate}
+						</div>
+						<div className='cardEventTime'>
+							<span className='fontEventCard'>
+								<FontAwesomeIcon icon={faBusinessTime} />
+							</span>
+							{props.eventTime}
+						</div>
+						<div className='cardEventVenue'>
+							<span className='fontEventCard'>
+								<FontAwesomeIcon icon={faLocationDot} />
+							</span>
+							{props.eventVenue}
+						</div>
+					</div>
 					<div className='recentEventDesc'>{props.eventDesc}</div>
 
 					{props.isUpcomingEvent ? (
@@ -51,6 +77,9 @@ EventCard.propTypes = {
 	eventName: PropTypes.string.isRequired,
 	eventShortDesc: PropTypes.string.isRequired,
 	eventDesc: PropTypes.string.isRequired,
+	eventDate: PropTypes.string.isRequired,
+	eventTime: PropTypes.string.isRequired,
+	eventVenue: PropTypes.string.isRequired,
 	isEventRegisterOpen: PropTypes.bool.isRequired,
 	isUpcomingEvent: PropTypes.bool.isRequired,
 };

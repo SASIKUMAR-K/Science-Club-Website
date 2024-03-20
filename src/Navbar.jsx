@@ -56,6 +56,17 @@ const Navbar = () => {
 							Contact us
 						</Link>
 					</div>
+					<div
+						className='navBarItem'
+						onClick={() => {
+							window.open(
+								'https://docs.google.com/forms/d/e/1FAIpQLSfkYfPJqe3gLPOHjaYAgoEzNm15RnZB9-ZWv_TBNO55GFU7WA/viewform?usp=sf_link',
+								'_blank'
+							);
+						}}
+					>
+						Register as Member
+					</div>
 				</div>
 				<div className='navBarMenu' onClick={navBarToggle}>
 					<div className={isMenuOpen ? 'line1' : 'x line1'}></div>

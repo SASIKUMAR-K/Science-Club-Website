@@ -2,9 +2,11 @@ import GallaryCarosal from './GallaryCarosal';
 import imageData from './gallaryData.json';
 import Navbar from './Navbar';
 import './css/gallaryPage.css';
+import Preloader from './PreLoader';
 const GallaryPage = () => {
 	return (
 		<div>
+			<Preloader />
 			<Navbar />
 			<div className='GallaryPageHeading'>SOS</div>
 			<GallaryCarosal images={imageData.sos} />

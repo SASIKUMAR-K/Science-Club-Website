@@ -5,12 +5,13 @@ body{
 .navBarContainer{
     display: flex;
     padding: 10px;
-    background-color:rgb(252, 223, 36);
+    /* background-color:rgb(252, 223, 36); */
+    background-color: white;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top:0px;
-    z-index: 3;
+    z-index: 5;
 }
 .navBarLogoContainer{
     display: flex;
@@ -26,13 +27,14 @@ body{
 .navBarItems{
     display: flex;
     justify-content: space-evenly;
-    gap: 20px;
+    gap: 35px;
     font-size: 25px;
     padding: 0px 20px;
     transition: all 1s ease;
 }
 .navBarItem{
     cursor: pointer;
+    color: black;
 }
 .navBarItem a{
     text-decoration: none;
@@ -64,7 +66,7 @@ body{
 }
   
 
-@media only screen and (max-width:850px){
+@media only screen and (max-width:1200px){
     .navBarMenu{
         display: flex;
     }
@@ -75,16 +77,13 @@ body{
         right: 0px;
         width: 200px;
         transform: translate(-0px,0);
-        background-color:rgb(21, 161, 255);
         height: 100vh;
         justify-content:flex-start;
         padding-top: 100px;
         gap: 30px;
-        color :white
+        background-color: white;
     }
-    .navBarItem a{
-        color: white;
-    }
+
     body{
         overflow-x: hidden;
     }
@@ -96,6 +95,7 @@ body{
 @media only screen and (max-width:380px){
     .navBarItems{
         top: 54px;
+        
     }
     .navBarLogoContainer img{
         height: 30px;

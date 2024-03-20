@@ -36,6 +36,8 @@
 }
 
 .aboutClubHomeMemberForm {
+    width: 90%;
+    
     text-align: center;
     margin: 10px auto;
     color: white;
@@ -46,12 +48,13 @@
     border: 2px solid #8E793E;
     border-radius: 22px;
     margin-bottom: 40px;
+    font-size: 30px;
+    font-weight: 1000;
 }
 
 .aboutClubHomeMemberForm:active {
     color: #8E793E;
-    background-color: white;
-    margin: 10px auto;   
+    background-color: white;  
 }
 .aboutClubHomeContainer{
     display: flex;
