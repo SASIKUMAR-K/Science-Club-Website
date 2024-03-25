@@ -1,15 +1,37 @@
 .eventsPageUpcomingWorking img{
     width: 300px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
     
+}
+.upComingMainDiv{
+    width: 90%;
+    margin: auto;
+    padding: 30px 0px;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid #6c757d;
 }
 .eventsPageUpcomingWorking{
     display: flex;
     justify-content: center;
 }
+.upComingWorkingText{
+    font-size: 30px;
+    text-align: center;
+    color: #8E793E;
+}
 .eventsPageHeadingTag{
     color :rgb(102, 102, 102);
     font-size: 40px;
     text-align: center;
-    margin: 10px 0px;
+    margin: 30px 0px;
     font-weight: 1000;
+    margin-bottom: 50px;
+}
+@media only screen and (max-width:1150px){
+    .upComingMainDiv{
+        width: 95%;
+    }
 }

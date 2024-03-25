@@ -1,8 +1,10 @@
 .aboutSistHomeSubHeadDiv {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     color: rgb(102, 102, 102);
     font-weight: 900;
+    padding-bottom: 30px;
+
 }
 
 .aboutSistHomePic {
@@ -13,27 +15,52 @@
 .aboutSistHomePic img {
     min-width: 250px;
     max-width: 350px;
+    border-radius: 50px;
+    border: 2px solid #6c757d;
 }
 
 .aboutSistHomeDescrip {
-    padding: 20px;
     text-align: justify;
-    font-size: 20px;
+    font-size: 25px;
     order: 1;
 }
 .aboutSistHomeContainer{
     display: flex;
     align-items: center;
+    gap: 20px;
+
+}
+.aboutSistHomeMainDiv{
+    padding: 0px 50px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding-top: 5px;
+    margin: 30px auto;
+    width: 90%;
+    border-radius: 50px;
+    border: 1px solid #6c757d;
+    padding: 30px 50px 50px 50px;
 }
 
 @media only screen and (max-width:1200px){
     .aboutSistHomeContainer{
-        flex-direction: column;
+        flex-direction: column-reverse;
         align-items: center;
+        
     }
     .aboutSistHomePic{
         display: flex;
         justify-content: center;
+
+    }
+    .aboutSistHomeMainDiv{
+        width: 95% !important;
+        border-radius: 20px !important;
+        padding: 30px 30px !important;
+    }
+    .aboutSistHomeDescrip{
+        font-size: 20px;
+        
     }
 }
 

@@ -1,26 +1,29 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './css/preLoader.css';
 
 const Preloader = () => {
+	const [loaded, setLoaded] = useState(false);
+
 	useEffect(() => {
 		const timeoutId = setTimeout(() => {
-			const container = document.getElementById('container');
-			if (container) {
-				container.classList.add('loaded');
-				const preloader = document.getElementById('preloader');
-				if (preloader) {
-					setTimeout(() => {
-						preloader.remove();
-					}, 500);
-				}
-			}
+			setLoaded(true);
 		}, 4000);
 
 		return () => clearTimeout(timeoutId);
 	}, []);
 
+	if (loaded) {
+		const preloader = document.getElementById('preloader');
+		if (preloader) {
+			preloader.style.display = 'none';
+		}
+	}
+
 	return (
-		<div id='preloader' className='container-preloader'>
+		<div
+			id='preloader'
+			className={`container-preloader ${loaded ? 'loaded' : ''}`}
+		>
 			<div id='container' className='animation-preloader'>
 				<img src='/img/loading.gif' alt='' width='250px' height='200px' />
 				<div className='txt-loading'>

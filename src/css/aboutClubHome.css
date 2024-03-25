@@ -8,26 +8,27 @@
 
 .aboutClubHomeSubHeadDiv {
     text-align: center;
-    font-size: 30px;
+    font-size: 40px;
     color: rgb(102, 102, 102);
     font-weight: 900;
 }
 
 .aboutClubHomePic {
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 .aboutClubHomePic img {
     min-width: 250px;
     max-width: 350px;
+    border-radius: 50px;
+    height: 250px;
+    border: 2px solid #6c757d;
+    margin: 10px 0px;
 }
 
 .aboutClubHomeDescrip {
-    padding: 20px;
     text-align: justify;
-    font-size: 20px;
+    font-size: 25px;
 }
 
 .aboutClubHomeMemberFormDiv {
@@ -36,10 +37,11 @@
 }
 
 .aboutClubHomeMemberForm {
-    width: 90%;
+    width: 70%;
     
     text-align: center;
     margin: 10px auto;
+    margin-top: 50px;
     color: white;
     background-color: #8E793E;
     padding: 5px 10px;
@@ -59,6 +61,7 @@
 .aboutClubHomeContainer{
     display: flex;
     align-items: center;
+    gap: 20px;
 }
 
 @media only screen and (max-width:1200px){
@@ -70,4 +73,23 @@
         display: flex;
         justify-content: center;
     }
+    .aboutClubHomeMainDiv{
+        width: 95% !important;
+        border-radius: 20px !important;
+        padding: 0px 30px !important;
+    }
+    .aboutClubHomeDescrip{
+        font-size: 20px;
+        
+    }
+}
+.aboutClubHomeMainDiv{
+    padding: 0px 50px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    padding-top: 5px;
+    margin: 30px auto;
+    width: 90%;
+    border-radius: 50px;
+    border: 1px solid #6c757d;
 }

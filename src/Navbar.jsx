@@ -1,11 +1,10 @@
 import mainLogo from '/img/mainLogo.jpg';
-import logoWord from '/img/logoWord.jpg';
 import './css/navbar.css';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
-
-const Navbar = () => {
-	const [isMenuOpen, setIsMenuOpen] = useState(false);
+import { Link, NavLink } from 'react-router-dom';
+import PropTypes from 'prop-types';
+const Navbar = (props) => {
+	const [isMenuOpen, setIsMenuOpen] = useState(props.navState);
 
 	const navBarToggle = () => {
 		setIsMenuOpen((prevState) => !prevState); // Using functional update to ensure proper synchronization
@@ -18,46 +17,49 @@ const Navbar = () => {
 	return (
 		<>
 			<div className='navBarContainer'>
-				<div className='navBarLogoContainer'>
-					<div className='navBarLogo'>
-						<img src={mainLogo} alt='' />
-					</div>
-					<div className='navBarLogoText'>
-						<img src={logoWord} alt='' />
-					</div>
-				</div>
+				<Link to='/'>
+					<div className='navBarLogoContainer'>
+						<div className='navBarLogo'>
+							<img src={mainLogo} alt='' />
+						</div>
+						<div className='navBarLogoText'>
+							<span className='navBarLogoBlackText'>Science</span>
+							<span className='navBarLogoYellowText'>Club</span>
+						</div>
+					</div>{' '}
+				</Link>
 				<div
 					className={
 						!isMenuOpen ? 'navBarItems' : 'navBarItems navBarItemsToggle'
 					}
 				>
 					<div className='navBarItem'>
-						<Link to='/' onClick={handleLinkClick}>
+						<NavLink to='/' onClick={handleLinkClick}>
 							Home
-						</Link>
+						</NavLink>
 					</div>
 					<div className='navBarItem'>
-						<Link to='/events' onClick={handleLinkClick}>
+						<NavLink to='/events' onClick={handleLinkClick}>
 							Events
-						</Link>
+						</NavLink>
 					</div>
 					<div className='navBarItem'>
-						<Link to='/gallary' onClick={handleLinkClick}>
+						<NavLink to='/gallary' onClick={handleLinkClick}>
 							Gallery
-						</Link>
+						</NavLink>
 					</div>
 					<div className='navBarItem'>
-						<Link to='/about' onClick={handleLinkClick}>
+						<NavLink to='/about' onClick={handleLinkClick}>
 							About us
-						</Link>
+						</NavLink>
 					</div>
 					<div className='navBarItem'>
-						<Link to='/contact' onClick={handleLinkClick}>
+						<NavLink to='/contact' onClick={handleLinkClick}>
 							Contact us
-						</Link>
+						</NavLink>
 					</div>
 					<div
-						className='navBarItem'
+						className='navBarItem registerMemberNavBar'
 						onClick={() => {
 							window.open(
 								'https://docs.google.com/forms/d/e/1FAIpQLSfkYfPJqe3gLPOHjaYAgoEzNm15RnZB9-ZWv_TBNO55GFU7WA/viewform?usp=sf_link',
@@ -79,3 +81,7 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+Navbar.propTypes = {
+	navState: PropTypes.bool.isRequired,
+};

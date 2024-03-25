@@ -1,6 +1,4 @@
-body{
-    overflow: auto;
-}
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
 
 .navBarContainer{
     display: flex;
@@ -12,63 +10,131 @@ body{
     position: sticky;
     top:0px;
     z-index: 5;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
+
 .navBarLogoContainer{
     display: flex;
     cursor: pointer;
+    align-items: center;
+    gap: 10px;
+    
+    
+}
+.navBarContainer a{
+    text-decoration: none;
+    color: #6c757d;
 }
 .navBarLogo img{
     width: 50px;
 }
-.navBarLogoText img{
+/* .navBarLogoText img{
     height: 50px;
-}
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+} */
+.navBarLogoText{
+        font-weight: 400;
+        font-style: normal;
+        font-size: 40px;
 
+}
+.navBarLogoBlackText,.navBarLogoYellowText {
+    font-family: "Bakbak One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .navBarLogoYellowText{
+    color:#8E793E;
+  }
 .navBarItems{
     display: flex;
     justify-content: space-evenly;
     gap: 35px;
     font-size: 25px;
-    padding: 0px 20px;
+    padding: 5px 5px;
     transition: all 1s ease;
 }
-.navBarItem{
+.navBarItem {
     cursor: pointer;
     color: black;
+    /* Changed transition property */
+    border: 2px solid white;
+    position: relative;
+    
+    
 }
+
+  
+.navBarItem a:active,.active{
+    background-color: #8E793E;
+    color: white !important;
+    border-radius: 10px;
+
+}
+
+
+.navBarItem:after{
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 0;
+    left: 3px;
+    border-radius: 4px;
+    background-color: #8E793E;
+    bottom:0px;
+    transition: width 0.3s ease;
+}
+
+.navBarItem:hover:after {
+    width: 95%;
+    color: black;
+}
+
 .navBarItem a{
     text-decoration: none;
     color: black;
+    padding: 5px 10px;
+    outline: none;
+}
+.registerMemberNavBar{
+    padding: 0px 5px;
 }
 .navBarMenu{
     display: none;
     flex-direction: column;
     gap: 10px;
     cursor: pointer;
-    
-    
+    outline: none;    
 }
 .navBarMenu div{
     width: 35px;
     border-bottom: 5px solid black;
     border-radius: 30px;
     transition: all 0.5s ease;
+    outline: none;
 }
 
 .x.line1{
     transform: translate(0px,7.5px) rotate(45deg);
+    outline: none;
 }
 .x.line2{
     display: none;
+    outline: none;
 }
 .x.line3{
     transform: translate(-0px,-7.5px) rotate(-45deg);
+    outline: none;
 }
   
 
 @media only screen and (max-width:1200px){
     .navBarMenu{
         display: flex;
+    }
+    .navBarItem:hover:after{
+        width: 0;
     }
     .navBarItems{
         flex-direction: column;
