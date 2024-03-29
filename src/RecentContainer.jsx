@@ -2,10 +2,13 @@ import PropTypes from 'prop-types';
 import EventCard from './EventCard';
 
 const RecentContainer = ({ recentEvents }) => {
+	console.log(recentEvents);
 	return (
 		<div className='recent-events-container'>
 			{recentEvents.map((event) => (
 				<EventCard
+					isView={false}
+					routingName={event.shortName}
 					key={event.name}
 					posterUrl={event.img}
 					eventName={event.name}
@@ -17,8 +20,6 @@ const RecentContainer = ({ recentEvents }) => {
 					isEventRegisterOpen={event.isOpen}
 					isUpcomingEvent={event.isFuture}
 					note={event.note} // Assuming note is an array of strings
-					number={event.number} // Assuming number is an array of strings
-					organizers={event.organizer} // Assuming organizer is an array of strings
 				/>
 			))}
 		</div>

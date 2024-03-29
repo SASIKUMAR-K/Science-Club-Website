@@ -1,6 +1,31 @@
-.GallaryPageHeading{
-    margin: 40px 0px 30px 0px;
+.gallaryPageContainer{
+    width: 90%;
+    padding: 20px;
+    border-radius: 20px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border: 1px solid #6c757d;
+    margin: 20px auto;
+}
+@media only screen and (max-width:500px) {
+    .gallaryPageContainer{
+        width: 95%;
+        margin: 10px auto;
+    }
+    .gallaryPageEventShortDesc{
+        margin-bottom: 0px;
+    }
+}
+.gallaryPageEventName{
     font-size: 40px;
-    text-align: center;
+    color: #6c757d;
     font-weight: 1000;
+    text-align: center;
+}
+.gallaryPageEventShortDesc{
+    font-size: 15px;
+    color: #8E793E;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
 }

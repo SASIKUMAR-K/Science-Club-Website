@@ -1,0 +1,118 @@
+.viewMoreEventName{
+    font-size: 60px;
+    font-weight: 1000;
+    text-align: center;
+    color: rgb(102, 102, 102);
+    background: transparent;
+    backdrop-filter: blur(10px);
+    
+}
+.viewMoreEventNameandShortDesc{
+    width: 90%;
+    margin: 20px auto;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 10px 0px;
+}
+.viewMoreShortDesc{
+    text-align: center;
+    font-size: 30px;
+    color: #8E793E;
+}
+
+.viewMoreeventCardNote{
+    width: 90%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 30px;
+}
+.viewMoreNoteHead{
+    color: #8E793E;
+    font-weight: 700;
+    text-align: center;
+}
+
+.viewMoreWinner{
+    width: 90%;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 20px;
+    margin: 20px auto;
+    font-size: 30px;
+}
+.viewMoreWinnerHead{
+    font-size: 50px;
+    text-align: center;
+    color:rgb(102, 102, 102) ;
+    font-weight: 1000;
+    margin-bottom: 20px;
+    
+}
+.viewMoreOrganizerCoorNum{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    margin: 20px auto;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.viewMoreOrganizerCoorNum>div{
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border: 1px solid rgb(102, 102, 102);
+    padding: 20px;
+    font-size: 25px;
+}
+.viewMoreOrgHead{
+    color: #8E793E;
+    font-weight: 700;
+    
+    font-size: 30px;
+}
+.viewMoreGallary{
+    margin-bottom: 0px !important;
+}
+.viewMoreOrganizers{
+    flex: 2;
+}
+.viewMoreCoordinators{
+    flex: 2;
+}
+.viewMoreContactNumber{
+    flex: 1;
+}
+.viewMoreCoordinatorsList,.viewMoreOrganizerList{
+    font-size: 20px;
+}
+.viewMoreOrgContainer{
+    margin: 20px 0px;
+}
+.viewMoreContactContainer{
+    font-size: 20px;
+    margin: 20px auto;
+}
+@media only screen and (max-width:1150px){
+    .viewMoreEventNameandShortDesc,.viewMoreeventCardNote,.viewMoreWinner,.viewMoreOrganizerCoorNum{
+        width: 95%;
+    }
+    .viewMoreOrganizerCoorNum{
+        flex-direction: column;
+    }
+
+}
+@media only screen and (max-width:350px){
+    .viewMoreCoordinatorsList,.viewMoreOrganizerList,.viewMoreContactNumberList{
+        font-size: 15px;
+    }
+
+}

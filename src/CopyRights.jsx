@@ -11,7 +11,7 @@ const CopyRights = () => {
 					<a href='https://www.linkedin.com/in/mr-sasikumar-k/' target='_blank'>
 						SASIKUMAR K
 					</a>
-					<span> Secretary of Science Club </span>
+					<span>Vice President of Science Club</span>
 				</p>
 			</div>
 		</div>

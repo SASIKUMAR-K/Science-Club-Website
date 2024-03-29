@@ -27,7 +27,7 @@
 }
 .recentEventPoster{
     height: 100%;
-    margin: auto;
+    margin: auto 0px;
 }
 .recentEventPoster img {
     border-radius: 20px;

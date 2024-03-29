@@ -12,7 +12,8 @@ const EventsPage = () => {
 	const [pastEvents, setPastEvents] = useState([]);
 
 	useEffect(() => {
-		// Filter upcoming and past events
+		document.title = 'Science Club • Events';
+
 		const upcoming = Object.values(data.events).filter(
 			(event) => event.isFuture
 		);
@@ -57,6 +58,8 @@ const EventsPage = () => {
 			<div className='eventsPageHeadingTag'>Past Events</div>
 			{pastEvents.map((event) => (
 				<EventCard
+					isView={false}
+					routingName={event.shortName}
 					key={event.name}
 					posterUrl={event.img}
 					eventName={event.name}
@@ -66,9 +69,8 @@ const EventsPage = () => {
 					eventTime={event.time}
 					eventVenue={event.venue}
 					isEventRegisterOpen={event.isOpen}
+					isUpcomingEvent={event.isFuture}
 					note={event.note}
-					organizers={event.organizers}
-					number={event.number}
 				/>
 			))}
 			<CopyRights />

@@ -5,10 +5,13 @@ import AboutClubHome from './AboutClubHome';
 import AboutSistHome from './AboutSistHome';
 import CopyRights from './CopyRights';
 import PreLoader from './PreLoader';
-import data from './data.json'; // Importing data.json
+import data from './data.json';
+import { useEffect } from 'react';
 
 function HomePage() {
-	// Extracting recent event names from data.json
+	useEffect(() => {
+		document.title = 'Science Club • Home';
+	}, []);
 	const recentEventNames = data.home.recent;
 
 	// Filtering events based on recent event names
@@ -20,7 +23,7 @@ function HomePage() {
 	return (
 		<>
 			<PreLoader />
-			<Navbar navState={true} activeIndex={1} />
+			<Navbar navState={true} />
 			<RecentContainer recentEvents={recentEvents} />
 			<AboutClubHome />
 			<AboutSistHome />

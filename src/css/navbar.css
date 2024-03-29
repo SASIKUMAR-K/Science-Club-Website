@@ -109,7 +109,7 @@
 }
 .navBarMenu div{
     width: 35px;
-    border-bottom: 5px solid black;
+    border-bottom: 5px solid rgb(102,102,102);
     border-radius: 30px;
     transition: all 0.5s ease;
     outline: none;
@@ -156,6 +156,12 @@
     .navBarItems.navBarItemsToggle{
         transform: translate(200px,0);
     }
+    .navBarItems{
+        padding-left: 30px;
+    }
+    .registerMemberNavBar{
+        padding-left: 10px;
+    }
 }
 
 @media only screen and (max-width:380px){
@@ -168,6 +174,15 @@
     }
     .navBarLogo img{
         width: 30px;
+    }
+    .navBarLogoText{
+        font-size: 25px;
+    }
+    .navBarMenu{
+        gap: 7px;
+    }
+    .navBarMenu div{
+        border-bottom: 4px solid rgb(102,102,102);
     }
 }
   

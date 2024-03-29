@@ -14,8 +14,9 @@ const EventCard = (props) => {
 	const handleRegisterClick = () => {
 		navigate('/register');
 	};
+
 	const handleViewMoreClick = () => {
-		navigate('/register');
+		navigate(`/${props.routingName}`);
 	};
 
 	return (
@@ -60,51 +61,42 @@ const EventCard = (props) => {
 								</div>
 							)}
 						</div>
-
-						{props.isUpcomingEvent ? (
-							props.isEventRegisterOpen ? (
-								<div className='recentEventRegister'>
-									<button onClick={handleRegisterClick}>Register Now</button>
-								</div>
-							) : (
-								<>
-									<div className='recentEventRegisterClosed'>
-										Registration Closed !!
-									</div>
-									<div className='recentEventSeeYou'>See you in occusion</div>
-								</>
-							)
+						{props.isView ? (
+							''
 						) : (
-							<div className='recentEventViewMore'>
-								<button onClick={handleViewMoreClick}>View More</button>
-							</div>
+							<>
+								{props.isUpcomingEvent ? (
+									props.isEventRegisterOpen ? (
+										<div className='recentEventRegister'>
+											<button onClick={handleRegisterClick}>
+												Register Now
+											</button>
+										</div>
+									) : (
+										<>
+											<div className='recentEventRegisterClosed'>
+												Registration Closed !!
+											</div>
+											<div className='recentEventSeeYou'>
+												See you in occasion
+											</div>
+										</>
+									)
+								) : null}
+								<div className='recentEventViewMore'>
+									<button onClick={handleViewMoreClick}>View More</button>
+								</div>
+							</>
 						)}
 					</div>
 					{props.eventDesc && (
 						<div className='recentEventDesc'>{props.eventDesc}</div>
 					)}
 				</div>
-
 				{props.note && (
 					<div className='eventCardNote'>
 						{props.note.map((note, index) => (
 							<div key={index}>{note}</div>
-						))}
-					</div>
-				)}
-
-				{props.number && (
-					<div className='eventCardNumber'>
-						{props.number.map((num, index) => (
-							<div key={index}>{num}</div>
-						))}
-					</div>
-				)}
-
-				{props.organizers && (
-					<div className='eventCardOrganizer'>
-						{props.organizers.map((organizer, index) => (
-							<div key={index}>{organizer}</div>
 						))}
 					</div>
 				)}
