@@ -16,7 +16,7 @@ const EventCard = (props) => {
 	};
 
 	const handleViewMoreClick = () => {
-		navigate(`/${props.routingName}`);
+		navigate(`/event/${props.routingName}`);
 	};
 
 	return (

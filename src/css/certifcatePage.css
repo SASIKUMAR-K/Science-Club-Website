@@ -1,0 +1,141 @@
+.certifcatePdf iframe{
+    width: 300px;
+    height: 500px;
+    background-color:#8E793E;
+    border-radius: 10px;
+    border: none;
+}
+.firstContainer,.secondContainer{
+    padding: 20px;
+    width: 800px;
+    border-radius: 20px;
+    border: 1px solid rgb(102,102,102);
+    background: transparent;
+    margin: auto;
+    backdrop-filter: blur(10px);
+    margin: 20px auto;
+}
+.certificateType,.certficatePageEventName{
+    font-size: 40px;
+    text-align: center;
+    color: #8E793E;
+    font-weight: 1000;
+}
+.certficatePageEventName{
+    color: rgb(102,102,102);
+}
+.certficatePageEventShortDesc,.certficatePageEventDate{
+    text-align: center;
+    font-size: 17px;
+    color: #8E793E;
+}
+.certficatePageEventDate{
+    color: rgb(102,102,102);
+}
+.secondContainer{
+    display: flex;
+    width: 800px;
+}
+.certificateDowload button:active,.certifiacatePageViewMoreEvents button:active{
+    background-color: white;
+    color: #8E793E;
+}
+
+.certificateDowload button,.certifiacatePageViewMoreEvents button{
+    width: 100%;
+    background-color: #8E793E;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 2px solid #8E793E;
+    outline: none;
+    color: white;
+    font-size: 20px;
+    font-weight: 1000;
+}
+.certificateIssueDate{
+    text-align: center;
+    margin-top: 10px;
+}
+.fourthContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    font-size: 25px;
+    position: relative;
+}
+.certificatePageparticipantName{
+    font-size: 30px;
+    color: #8E793E;
+    font-weight: 700;
+    
+}
+.certifiacatePageViewMoreEvents button{
+    position: absolute;
+    bottom:31px;
+    left: 50%;
+    transform: translate(-50%);
+    width: 400px;
+}
+
+@media only screen and (max-width:900px){
+    .firstContainer{
+        width: 500px;
+    }
+    .secondContainer{
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+    }
+    .certifiacatePageViewMoreEvents{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        position: relative;
+        height: 80px;
+    }
+    .certifiacatePageViewMoreEvents button{
+        position: absolute;
+        bottom: 0;
+
+    }
+    .certificateIssueDate{
+        margin-bottom: 20px ;
+    }
+}
+
+@media only screen and (max-width:500px){
+    .firstContainer{
+        width: 95%;
+    }
+    .secondContainer{
+        width: 95%;
+    }
+    .certifiacatePageViewMoreEvents button{
+        width: 100%;
+        
+    }
+    .certifiacatePageViewMoreEvents{
+        height: 90px;
+    }
+}
+@media only screen and (max-width:400px){
+    .certifcatePdf iframe{
+        width: 100%;
+        height: 350px;
+    }
+    .certificateDowload button{
+        font-size: 15px;
+    }
+    .fourthContainer{
+        align-items: flex-start;
+    }
+    .certifiacatePageViewMoreEvents{
+        height: 110px;
+    }
+
+}

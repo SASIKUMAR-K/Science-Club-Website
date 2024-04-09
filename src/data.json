@@ -1,6 +1,6 @@
 {
     "home":{
-        "recent":["sos","sowmar142024"],
+        "recent":["sos24","sowmar142024"],
         "carosal":[],
         "about":{
             "aboutclub":{
@@ -44,8 +44,8 @@
                 "max":26
             }
         },
-        "sos":{
-        "shortName":"sos",
+        "sos24":{
+        "shortName":"sos24",
         "isFuture":false,
         "isOpen":false,
         "img":"/img/events/2024/1sos/poster.png",

@@ -6,6 +6,7 @@ import AboutUsPage from './AboutUsPage';
 import ContactUsPage from './ContactUsPage';
 import ViewMore from './ViewMore';
 import ScrollToTop from './Scroll.jsx';
+import CertificatePage from './CertificatePage.jsx';
 function Connect() {
 	return (
 		<>
@@ -17,7 +18,11 @@ function Connect() {
 					<Route path='/gallary' element={<GallaryPage />} />
 					<Route path='/about' element={<AboutUsPage />} />
 					<Route path='/contact' element={<ContactUsPage />} />
-					<Route path='/:shortName' element={<ViewMore />} />
+					<Route
+						path='/certificate/:certificateId'
+						element={<CertificatePage />}
+					/>
+					<Route path='/event/:shortName' element={<ViewMore />} />
 				</Routes>
 			</Router>
 		</>
