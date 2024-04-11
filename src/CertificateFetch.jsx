@@ -7,7 +7,7 @@ const CertificateFetch = (certificateId) => {
 		const fetchData = async () => {
 			try {
 				// Fetch CSV file from project directory
-				const response = await fetch('../Certificate.csv');
+				const response = await fetch('/Certificate.csv');
 				const csvData = await response.text();
 
 				// Parse CSV data
@@ -35,7 +35,6 @@ const CertificateFetch = (certificateId) => {
 
 		fetchData();
 	}, []);
-	console.log(jsonData);
 
 	if (!jsonData) {
 		return null;

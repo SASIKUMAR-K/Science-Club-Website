@@ -15,9 +15,11 @@ const EventsPage = () => {
 		document.title = 'Science Club • Events';
 
 		const upcoming = Object.values(data.events).filter(
-			(event) => event.isFuture
+			(event) => event.isUpcomingEvent
 		);
-		const past = Object.values(data.events).filter((event) => !event.isFuture);
+		const past = Object.values(data.events).filter(
+			(event) => !event.isUpcomingEvent
+		);
 		setUpcomingEvents(upcoming);
 		setPastEvents(past); // Set loading to false after data is fetched
 	}, []);
@@ -38,11 +40,12 @@ const EventsPage = () => {
 						eventDate={event.date}
 						eventTime={event.time}
 						eventVenue={event.venue}
-						isEventRegisterOpen={event.isOpen}
-						isUpcomingEvent={event.isFuture}
+						isEventRegisterOpen={event.isEventRegisterOpen}
+						isUpcomingEvent={event.isUpcomingEvent}
 						note={event.note}
 						organizers={event.organizers}
 						number={event.number}
+						form={event.form}
 					/>
 				))
 			) : (
@@ -68,8 +71,8 @@ const EventsPage = () => {
 					eventDate={event.date}
 					eventTime={event.time}
 					eventVenue={event.venue}
-					isEventRegisterOpen={event.isOpen}
-					isUpcomingEvent={event.isFuture}
+					isEventRegisterOpen={event.isEventRegisterOpen}
+					isUpcomingEvent={event.isUpcomingEvent}
 					note={event.note}
 				/>
 			))}

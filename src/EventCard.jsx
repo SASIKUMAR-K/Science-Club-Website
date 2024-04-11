@@ -12,7 +12,7 @@ const EventCard = (props) => {
 	const navigate = useNavigate();
 
 	const handleRegisterClick = () => {
-		navigate('/register');
+		window.open(props.form);
 	};
 
 	const handleViewMoreClick = () => {
@@ -82,10 +82,11 @@ const EventCard = (props) => {
 											</div>
 										</>
 									)
-								) : null}
-								<div className='recentEventViewMore'>
-									<button onClick={handleViewMoreClick}>View More</button>
-								</div>
+								) : (
+									<div className='recentEventViewMore'>
+										<button onClick={handleViewMoreClick}>View More</button>
+									</div>
+								)}
 							</>
 						)}
 					</div>
@@ -94,9 +95,12 @@ const EventCard = (props) => {
 					)}
 				</div>
 				{props.note && (
-					<div className='eventCardNote'>
+					<div className='eventCardPageNote'>
+						<div className='eventCardPageNoteHead'>Note!!</div>
 						{props.note.map((note, index) => (
-							<div key={index}>{note}</div>
+							<div key={index} className='eventCardNoteList'>
+								{note}
+							</div>
 						))}
 					</div>
 				)}

@@ -1,6 +1,6 @@
 {
     "home":{
-        "recent":[],
+        "recent":["scixart24"],
         "carosal":[],
         "about":{
             "aboutclub":{
@@ -14,7 +14,33 @@
         }  
     },
     "events":{
-       
+        "scixart24":{
+            "shortName":"scixart24",
+            "isUpcomingEvent":true,
+            "isEventRegisterOpen":true,
+            "form":"https://docs.google.com/forms/d/e/1FAIpQLScz5scm3TTTa_ZyhE-ECCMlthrzgahf-pXuo0LsV69BnPGDyw/viewform?usp=sf_link",
+            "img":"/img/events/2024/3scixart/poster.png",
+            "name":"SCI X ART",
+            "short":"Science Sketch Contest",
+            "date":"12.04.2024",
+            "time":"10.00 AM",
+            "venue":"DRAWING HALL, CIVIL DEPT  2nd Floor",
+            "desc":"Hey folks! , Science Club is back with another awesome event, bringing you the opportunity to unveil your creativity! An event designed to bring out your artistic potential, Yeah! It's a \" Drawing Event\" with the theme being, any guesses?  science! Your specific “theme” will be announced in the event itself. This is an opportunity to fly solo🕊 and show the world that the pen  is mightier than the sword!  We hope to see you all there! Thank you!! . Ready your pencils and Curl your papers, Get.. Set.. Draw!! ",
+            "note":["The required materials for the compitition (including colours, A4 sheets and other requirements) should be brought by the participants individually as we won't be providing any supplies."],
+            "organizer":["Rajesh G - B.E(EEE) - 3rd year",
+        "Sasikumar K - B.E(EEE) - 3rd year",
+        "Periyar Selvan N - B.E(EEE) - 3rd year"],
+        "coordinators":[
+            "Sarithira P - B.E(EEE) - 3rd year",
+            "Varsha S  - B.E(EEE) - 3rd year",
+            "Sathish M -B.E(EEE) - 3rd year",
+            "Pranav RK - B.E(EEE) - 3rd Year"
+        ],
+            "number":["9344149245"],
+            "winnerPhoto":false,
+            "winners":false,
+            "gallary": false
+        },
         "sowmar142024":{
             "shortName":"sowmar142024",
             "isUpcomingEvent":false,

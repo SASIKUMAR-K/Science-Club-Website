@@ -1,10 +1,13 @@
 .recentEventContainer {
-    border: 1px solid #6c757d;
-    width: 90%;
-    padding: 5px;
+    
     display: flex;
     justify-content: space-between;
     gap: 30px;
+    
+}
+.recentEventMainContainer{
+    border: 1px solid #6c757d;
+    width: 90%;
     color: #8E793E;
     border-radius: 20px;
     margin: 10px auto;
@@ -109,12 +112,32 @@
 .fontEventCard {
     padding: 0px 10px;
 }
+.eventCardPageNote{
+    background-color: #8E793E;
+    color: white;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 20px;
+}
+.eventCardPageNoteHead{
+    font-size: 30px;
+    font-weight: 700;
+}
+.eventCardNoteList{
+    
+    padding: 10px 0px;
+    padding-left: 20px;
+    font-size: 20px;
+}
 
 @media only screen and (max-width: 1150px) {
     .recentEventContainer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        
+    }
+    .recentEventMainContainer{
         padding: 30px;
         width: 95%;
     }

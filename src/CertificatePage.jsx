@@ -10,15 +10,22 @@ const CertificatePage = () => {
 	const navigate = useNavigate();
 	const { certificateId } = useParams();
 	const certificateData = CertificateFetch(certificateId);
-	console.log(certificateData);
 	if (!certificateData) {
 		return <div>Certificate not found</div>;
 	}
 
-	const { Type, RegisterNumber, Dept, Year, Section, PDFLink, IssueDate, sen } =
-		certificateData;
-	console.log(sen);
-	const eventShortName = sen ? sen.trim() : null; // Check if EventShortName exists
+	const {
+		Type,
+		RegisterNumber,
+		Dept,
+		Year,
+		Section,
+		PDFLink,
+		IssueDate,
+		shortEventName,
+		Place,
+	} = certificateData;
+	const eventShortName = shortEventName ? shortEventName.trim() : null; // Check if EventShortName exists
 	const eventDetails = eventShortName ? eventData.events[eventShortName] : null; // Check if eventShortName exists
 
 	if (!eventDetails) {
@@ -29,7 +36,6 @@ const CertificatePage = () => {
 		name: eventName,
 		date: eventDate,
 		short: eventShortDesc,
-		viewMoreNavigation: eventViewMoreNavigation,
 	} = eventDetails;
 
 	// Function to handle download button click
@@ -44,6 +50,9 @@ const CertificatePage = () => {
 	return (
 		<>
 			<PreLoader />
+			<div className='certificatePageScienceClubHead'>
+				Science<span>Club</span>
+			</div>
 			<div className='firstContainer'>
 				<div className='certificateType'>{Type}</div>
 				<div className='certficatePageEventName'>{eventName}</div>
@@ -63,17 +72,28 @@ const CertificatePage = () => {
 				</div>
 
 				<div className='fourthContainer'>
+					{Place && (
+						<div className='certificatePageWinnerPlace'>{Place} Place</div>
+					)}
 					<div className='certificatePageparticipantName'>
 						Name : {certificateData.Name}
 					</div>
-					<div className='certificatePageparticipantRegisterNumber'>
-						Register Number : {RegisterNumber}
-					</div>
-					<div className='certificatePageparticipantDept'>Dept : {Dept}</div>
-					<div className='certificatePageparticipantSection'>
-						Section : {Section}
-					</div>
-					<div className='certificatePageparticipantYear'>Year : {Year}</div>
+					{RegisterNumber && (
+						<div className='certificatePageparticipantRegisterNumber'>
+							Register Number : {RegisterNumber}
+						</div>
+					)}
+					{Dept && (
+						<div className='certificatePageparticipantDept'>Dept : {Dept}</div>
+					)}
+					{Section && (
+						<div className='certificatePageparticipantSection'>
+							Section : {Section}
+						</div>
+					)}
+					{Year && (
+						<div className='certificatePageparticipantYear'>Year : {Year}</div>
+					)}
 					<div className='certifiacatePageViewMoreEvents'>
 						<button onClick={handleViewMoreClick}>
 							View More About the Event

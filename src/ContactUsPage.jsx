@@ -78,7 +78,6 @@ const ContactUsPage = () => {
 				)
 				.then(
 					(result) => {
-						console.log(result.text);
 						setAlertMessage('Message sent successfully!');
 						window.alert('Message sent successfully!');
 						setName('');
@@ -89,7 +88,6 @@ const ContactUsPage = () => {
 						setMessageError('');
 					},
 					(error) => {
-						console.log(error.text);
 						setAlertMessage('An error occurred. Please try again later.');
 					}
 				);
