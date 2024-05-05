@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 const CertificatePage = () => {
 	const navigate = useNavigate();
 	const { certificateId } = useParams();
-	const certificateData = CertificateFetch(certificateId);
+	const certificateData = CertificateFetch({ certificateId });
 	if (!certificateData) {
 		return <div>Certificate not found</div>;
 	}

@@ -6,7 +6,7 @@ const RecentContainer = ({ recentEvents }) => {
 		<div className='recent-events-container'>
 			{recentEvents.map((event) => (
 				<EventCard
-					isView={false}
+					isView={event.isView}
 					routingName={event.shortName}
 					key={event.name}
 					posterUrl={event.img}

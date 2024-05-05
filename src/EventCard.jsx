@@ -12,7 +12,7 @@ const EventCard = (props) => {
 	const navigate = useNavigate();
 
 	const handleRegisterClick = () => {
-		window.open(props.form);
+		window.open(props.form, '_blank');
 	};
 
 	const handleViewMoreClick = () => {
@@ -61,33 +61,26 @@ const EventCard = (props) => {
 								</div>
 							)}
 						</div>
-						{props.isView ? (
-							''
-						) : (
-							<>
-								{props.isUpcomingEvent ? (
-									props.isEventRegisterOpen ? (
-										<div className='recentEventRegister'>
-											<button onClick={handleRegisterClick}>
-												Register Now
-											</button>
-										</div>
-									) : (
-										<>
-											<div className='recentEventRegisterClosed'>
-												Registration Closed !!
-											</div>
-											<div className='recentEventSeeYou'>
-												See you in occasion
-											</div>
-										</>
-									)
-								) : (
-									<div className='recentEventViewMore'>
-										<button onClick={handleViewMoreClick}>View More</button>
+
+						{props.isUpcomingEvent ? (
+							props.isEventRegisterOpen ? (
+								<div className='recentEventRegister'>
+									<button onClick={handleRegisterClick}>Register Now</button>
+								</div>
+							) : (
+								<>
+									<div className='recentEventRegisterClosed'>
+										Registration Closed !!
 									</div>
-								)}
-							</>
+									<div className='recentEventSeeYou'>See you in occasion</div>
+								</>
+							)
+						) : props.isView ? (
+							<div className='recentEventViewMore'>
+								<button onClick={handleViewMoreClick}>View More</button>
+							</div>
+						) : (
+							''
 						)}
 					</div>
 					{props.eventDesc && (

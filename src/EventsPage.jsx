@@ -46,6 +46,7 @@ const EventsPage = () => {
 						organizers={event.organizers}
 						number={event.number}
 						form={event.form}
+						isView={event.isView}
 					/>
 				))
 			) : (
@@ -61,7 +62,6 @@ const EventsPage = () => {
 			<div className='eventsPageHeadingTag'>Past Events</div>
 			{pastEvents.map((event) => (
 				<EventCard
-					isView={false}
 					routingName={event.shortName}
 					key={event.name}
 					posterUrl={event.img}
@@ -74,6 +74,7 @@ const EventsPage = () => {
 					isEventRegisterOpen={event.isEventRegisterOpen}
 					isUpcomingEvent={event.isUpcomingEvent}
 					note={event.note}
+					isView={event.isView}
 				/>
 			))}
 			<CopyRights />

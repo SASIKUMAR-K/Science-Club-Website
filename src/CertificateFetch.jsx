@@ -1,44 +1,43 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 
-const CertificateFetch = (certificateId) => {
+const CertificateFetch = ({ certificateId }) => {
 	const [jsonData, setJsonData] = useState(null);
 
 	useEffect(() => {
-		const fetchData = async () => {
+		const fetchCSVData = async () => {
 			try {
-				// Fetch CSV file from project directory
-				const response = await fetch('/Certificate.csv');
-				const csvData = await response.text();
-
-				// Parse CSV data
-				const lines = csvData.split('\n');
-				const headers = lines[0].split(',');
-				const data = [];
-
-				for (let i = 1; i < lines.length; i++) {
-					const line = lines[i].split(',');
-					if (line.length === headers.length) {
-						const obj = {};
-						for (let j = 0; j < headers.length; j++) {
-							obj[headers[j]] = line[j];
-						}
-						data.push(obj);
-					}
-				}
-
-				// Set JSON data in component state
-				setJsonData(data);
+				const csvUrl = import.meta.env.VITE_REACT_APP_CSV_URL; // Access CSV URL from environment variable
+				const response = await axios.get(csvUrl); // Fetch CSV data using Axios
+				const parsedCsvData = parseCSV(response.data); // Parse CSV data into JSON
+				setJsonData(parsedCsvData);
 			} catch (error) {
-				console.error('Error fetching data:', error);
+				console.error('Error fetching CSV data:', error);
 			}
 		};
 
-		fetchData();
+		fetchCSVData(); // Fetch CSV data when the component mounts
 	}, []);
 
+	function parseCSV(csvText) {
+		const rows = csvText.split(/\r?\n/); // Split CSV text into rows
+		const headers = rows[0].split(','); // Extract headers (assumes the first row is the header row)
+		const data = []; // Initialize an array to store the parsed data
+		for (let i = 1; i < rows.length; i++) {
+			const rowData = rows[i].split(','); // Split the row
+			const rowObject = {};
+			for (let j = 0; j < headers.length; j++) {
+				rowObject[headers[j]] = rowData[j]; // Map row data to headers
+			}
+			data.push(rowObject); // Push row object to data array
+		}
+
+		return data;
+	}
 	if (!jsonData) {
 		return null;
 	}
+	console.log(certificateId);
 	const certificate = jsonData.find(
 		(item) => item.CertificateId === certificateId
 	);
