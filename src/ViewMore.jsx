@@ -43,7 +43,6 @@ const ViewMore = () => {
 					<div className='viewMoreShortDesc'>{eventData.short}</div>
 				</div>
 				<EventCard
-					isView={true}
 					key={eventData.name}
 					posterUrl={eventData.img}
 					eventDesc={eventData.desc}

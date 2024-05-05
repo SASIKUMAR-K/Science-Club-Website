@@ -19,8 +19,8 @@
         "scixart24": {
             "isView":false,
             "shortName": "scixart24",
-            "isUpcomingEvent": true,
-            "isEventRegisterOpen": true,
+            "isUpcomingEvent": false,
+            "isEventRegisterOpen": false,
             "form": "https://docs.google.com/forms/d/e/1FAIpQLScz5scm3TTTa_ZyhE-ECCMlthrzgahf-pXuo0LsV69BnPGDyw/viewform?usp=sf_link",
             "img": "/img/events/2024/3scixart/poster.png",
             "name": "SCI X ART",
@@ -51,7 +51,7 @@
             "gallary": false
         },
         "sowmar142024": {
-            "isView":false,
+            "isView":true,
             "shortName": "sowmar142024",
             "isUpcomingEvent": false,
             "isEventRegisterOpen": false,
@@ -83,7 +83,7 @@
             }
         },
         "sos24": {
-            "isView":false,
+            "isView":true,
             "shortName": "sos24",
             "isUpcomingEvent": false,
             "isEventRegisterOpen": false,
@@ -122,7 +122,7 @@
             }
         },
         "darpan23": {
-            "isView":false,
+            "isView":true,
             "shortName": "darpan23",
             "isUpcomingEvent": false,
             "isEventRegisterOpen": false,
