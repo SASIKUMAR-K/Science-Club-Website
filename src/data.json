@@ -1,7 +1,7 @@
 {
     "home": {
         "recent": [
-            "scixart24"
+            "spaced2024"
         ],
         "carosal": [],
         "about": {
@@ -16,6 +16,37 @@
         }
     },
     "events": {
+        "spaced2024": {
+            "isView":false,
+            "shortName": "spaced2024",
+            "isUpcomingEvent": false,
+            "isEventRegisterOpen": false,
+            "form": "https://docs.google.com/forms/d/e/1FAIpQLSdHPaedkAlGsmxwhXRKamZvkspalTPclyJZ1TIUsVnHCQSnLw/viewform?usp=sf_link",
+            "img": "/img/events/2024/4spaceday2024/poster.jpg",
+            "name": "Space Day EXPO",
+            "short": "Expolring about space",
+            "date": "23.08.2024",
+            "time": "10.00 AM",
+            "venue": "Kalaivanar Arangam",
+            "desc": "Hey folks! The Science Club is back with another awesome event, giving you the opportunity to explore and get interested in space.",
+            "note": false,
+            "organizer": [
+                "Rajesh G - B.E(EEE) - 4th Year",
+                "Sasikumar K - B.E(EEE) - 4th year",
+                "Periyar Selvan N - B.E(EEE) - 4th year"
+            ],
+            "coordinators": [
+                "Uganthar - B.E(ECE) - 3rd Year",
+                "Adithiya - B.E(CSE) - 2nd Year",
+                "Dillani - B.E(ECE) - 2nd Year"
+            ],
+            "number": [
+                "9344149245"
+            ],
+            "winnerPhoto": false,
+            "winners": false,
+            "gallary": false
+        },
         "scixart24": {
             "isView":false,
             "shortName": "scixart24",
